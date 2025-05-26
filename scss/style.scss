@@ -866,15 +866,49 @@ h1, h2, h3, h4, h5,
 
 
 //SKILLS--------------------
-.progress-wrap{
-	width: 100%;
-	margin-bottom: 30px;
-	h3{
-		font-size: 16px;
-		margin-bottom: 10px;
-		font-weight: 500;
-
-	}
+.skills-container {
+    padding: 20px;
+    .skill-category {
+        margin-bottom: 30px;
+        h3 {
+            color: $primary;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            position: relative;
+            &:after {
+                position: absolute;
+                bottom: -15px;
+                left: 0; 
+                right: 0;
+                content: '';
+                width: 30px;
+                height: 1px;
+                background: $primary;
+                margin: 0 auto;
+            }
+        }
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 25px;
+        }
+        .skill-item {
+            background-color: rgba(255,255,255,.1);
+            padding: 8px 16px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: $black;
+            border: 1px solid $primary;
+            transition: all 0.3s ease;
+            &:hover {
+                background: $primary;
+                color: $white;
+                transform: translateY(-2px);
+            }
+        }
+    }
 }
 //PROGRESS BAR
 .progress{
