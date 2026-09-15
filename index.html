@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-	<title>Md Moinul Hossain Portfolio</title>
+	<title>Md Moinul Hossain | Senior Software Engineer</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="Senior Software Engineer with 6+ years experience in Python, Java, FastAPI, Spring Boot — specializing in Fintech, EdTech, E-commerce & Sales Tax Automation.">
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
@@ -22,10 +23,203 @@
 	<link rel="stylesheet" href="css/flaticon.css">
 	<link rel="stylesheet" href="css/icomoon.css">
 	<link rel="stylesheet" href="css/style.css">
+
+	<style>
+		/* ── stat strip ── */
+		.stat-strip {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			gap: 2rem;
+			margin: 2rem 0 0;
+		}
+		.stat-item {
+			text-align: center;
+		}
+		.stat-item .num {
+			display: block;
+			font-size: 2.4rem;
+			font-weight: 700;
+			color: #F96D00;
+			line-height: 1;
+		}
+		.stat-item .lbl {
+			font-size: 0.8rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #555;
+		}
+
+		/* ── tag pills ── */
+		.tag-pill {
+			display: inline-block;
+			background: #fff3ec;
+			color: #F96D00;
+			border: 1px solid #ffd5b5;
+			border-radius: 20px;
+			padding: 3px 12px;
+			font-size: 0.75rem;
+			font-weight: 600;
+			margin: 3px 2px;
+		}
+
+		/* ── experience cards ── */
+		.exp-card {
+			background: #fff;
+			border-left: 4px solid #F96D00;
+			border-radius: 6px;
+			padding: 1.2rem 1.5rem;
+			margin-bottom: 1.5rem;
+			box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+			transition: transform .2s, box-shadow .2s;
+		}
+		.exp-card:hover {
+			transform: translateY(-3px);
+			box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+		}
+		.exp-card .exp-meta {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			gap: 0.5rem;
+			margin-bottom: 0.4rem;
+		}
+		.exp-card .exp-title { font-size: 1.1rem; font-weight: 700; margin: 0; }
+		.exp-card .exp-company { color: #F96D00; font-weight: 600; font-size: 0.9rem; }
+		.exp-card .exp-date { color: #aaa; font-size: 0.8rem; margin-left: auto; }
+		.exp-card ul { margin: 0.6rem 0 0 1rem; padding: 0; }
+		.exp-card ul li { font-size: 0.88rem; color: #555; margin-bottom: 3px; }
+
+		/* ── project cards ── */
+		.proj-card {
+			background: #fff;
+			border-radius: 10px;
+			box-shadow: 0 3px 16px rgba(0,0,0,0.08);
+			overflow: hidden;
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			transition: transform .25s, box-shadow .25s;
+		}
+		.proj-card:hover { transform: translateY(-5px); box-shadow: 0 8px 30px rgba(0,0,0,0.14); }
+		.proj-card .proj-img {
+			height: 180px;
+			background-size: cover;
+			background-position: center;
+			background-color: #f5f5f5;
+			position: relative;
+		}
+		.proj-card .proj-category {
+			position: absolute;
+			top: 10px; left: 10px;
+			background: #F96D00;
+			color: #fff;
+			font-size: 0.7rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			padding: 3px 10px;
+			border-radius: 20px;
+		}
+		.proj-card .proj-body { padding: 1.2rem; flex: 1; display: flex; flex-direction: column; }
+		.proj-card .proj-body h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+		.proj-card .proj-body p { font-size: 0.85rem; color: #666; flex: 1; }
+		.proj-card .proj-links { display: flex; gap: 0.5rem; margin-top: 0.8rem; }
+		.proj-card .proj-links a {
+			font-size: 0.78rem;
+			font-weight: 600;
+			padding: 4px 14px;
+			border-radius: 20px;
+			text-decoration: none;
+			transition: .2s;
+		}
+		.proj-links .btn-gh { background: #24292e; color: #fff; }
+		.proj-links .btn-gh:hover { background: #444; color: #fff; }
+		.proj-links .btn-demo { background: #F96D00; color: #fff; }
+		.proj-links .btn-demo:hover { background: #d95f00; color: #fff; }
+
+		/* ── skill badges ── */
+		.skill-badge {
+			display: inline-block;
+			background: #f7f7f7;
+			border: 1px solid #e0e0e0;
+			border-radius: 6px;
+			padding: 6px 14px;
+			font-size: 0.82rem;
+			font-weight: 600;
+			margin: 4px;
+			color: #333;
+			transition: background .2s, color .2s;
+		}
+		.skill-badge:hover { background: #F96D00; color: #fff; border-color: #F96D00; }
+
+		/* ── achievement timeline ── */
+		.achievement-item {
+			display: flex;
+			gap: 1rem;
+			margin-bottom: 1.4rem;
+		}
+		.achievement-icon {
+			width: 44px; height: 44px; flex-shrink: 0;
+			background: #fff3ec;
+			border: 2px solid #F96D00;
+			border-radius: 50%;
+			display: flex; align-items: center; justify-content: center;
+			font-size: 1.1rem;
+		}
+		.achievement-body h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 2px; }
+		.achievement-body p { font-size: 0.82rem; color: #666; margin: 0; }
+
+		/* ── open source strip ── */
+		.oss-strip {
+			background: linear-gradient(135deg, #1e1e2e 0%, #2d2d44 100%);
+			border-radius: 10px;
+			padding: 1.5rem 2rem;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			gap: 1.5rem;
+			margin-top: 2rem;
+		}
+		.oss-strip .oss-icon { font-size: 2.5rem; }
+		.oss-strip h4 { margin: 0 0 4px; font-size: 1rem; font-weight: 700; }
+		.oss-strip p { margin: 0; font-size: 0.85rem; color: #aaa; }
+		.oss-strip a { color: #F96D00; }
+
+		/* ── blog card improvements ── */
+		.blog-tag {
+			font-size: 0.7rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			color: #F96D00;
+			margin-bottom: 4px;
+			display: block;
+		}
+
+		/* ── hire me section ── */
+		.hireme-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1rem; }
+		.hireme-badges span {
+			background: rgba(255,255,255,0.15);
+			border: 1px solid rgba(255,255,255,0.3);
+			color: #fff;
+			padding: 6px 18px;
+			border-radius: 20px;
+			font-size: 0.82rem;
+			font-weight: 600;
+		}
+
+		/* ── responsive ── */
+		@media (max-width: 767px) {
+			.stat-strip { gap: 1rem; }
+			.stat-item .num { font-size: 1.8rem; }
+			.exp-card .exp-date { margin-left: 0; }
+			.oss-strip { flex-direction: column; text-align: center; }
+		}
+	</style>
 </head>
 
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
 
 	<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
 		<div class="container">
@@ -34,21 +228,21 @@
 				data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="oi oi-menu"></span> Menu
 			</button>
-
 			<div class="collapse navbar-collapse" id="ftco-nav">
 				<ul class="navbar-nav nav ml-auto">
 					<li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-<!--				<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>-->
-					<!-- <li class="nav-item"><a href="#services-section" class="nav-link"><span>Services</span></a></li> -->
+					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
-					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>My Blog</span></a></li>
+					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
-	<section class="hero-wrap js-fullheight">
+
+	<!-- ══════════════ HERO ══════════════ -->
+	<section class="hero-wrap js-fullheight" id="home-section">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row no-gutters slider-text js-fullheight justify-content-center align-items-center">
@@ -58,87 +252,112 @@
 						<h1>Md Moinul Hossain</h1>
 						<h2>I'm a
 							<span class="txt-rotate" data-period="2000"
-								data-rotate='[ "Senior Backend Engineer" ]'></span>
+								data-rotate='[ "Senior Software Engineer", "Backend Architect", "Python & Java Developer", "Microservices Enthusiast" ]'></span>
 						</h2>
+						<p style="color:rgba(255,255,255,0.75); margin-top:1rem; font-size:1rem;">
+							6+ years · Python · Java · FastAPI · Spring Boot · AWS · Microservices
+						</p>
+						<p style="margin-top:1.5rem;">
+							<a href="#projects-section" class="btn btn-primary py-3 px-5 mr-2">View Work</a>
+							<a href="mailto:mdmoinulh13@gmail.com" class="btn btn-white btn-outline-white py-3 px-5">Hire Me</a>
+						</p>
 					</div>
 				</div>
 			</div>
-		</div>
 		</div>
 		<div class="mouse">
-			<a href="#" class="mouse-icon">
+			<a href="#about-section" class="mouse-icon">
 				<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
 			</a>
-		</div>p
+		</div>
 	</section>
 
+	<!-- ══════════════ ABOUT ══════════════ -->
 	<section class="ftco-section" id="about-section">
 		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
-				<div class="col-md-7 heading-section text-center ftco-animate">
+			<div class="row justify-content-center mb-4">
+				<div class="col-md-9 heading-section text-center ftco-animate">
 					<h1 class="big big-2">About</h1>
 					<h2 class="mb-4">About Me</h2>
-					<p>Hi, I am a Senior Software Engineer with over 6 years of experience crafting robust and scalable
-						backend solutions. My journey spans across diverse industries including Fintech, EdTech, E-commerce,
-						Restaurant Automation, and Sales Tax Automation, where I've consistently delivered high-impact
-						applications that drive business growth. I excel in backend development, leveraging my expertise in
-						Python, Java, Spring Boot, and FastAPI to build efficient, maintainable systems. My cloud-native
-						approach, particularly with AWS, combined with deep knowledge of microservices architecture and
-						containerization, enables me to design systems that scale seamlessly. I take pride in my ability to
-						tackle complex challenges, from managing large-scale data migrations to modernizing legacy systems,
-						while maintaining a strong focus on performance optimization and data integrity. As a technical
-						leader, I'm passionate about mentoring teams and fostering a culture of innovation and excellence
-						in software development.</p>
+					<p>
+						I'm a <strong>Senior Software Engineer</strong> with <strong>6+ years of experience</strong> building
+						robust, scalable backend systems across <em>Fintech, EdTech, E-commerce, Restaurant Automation,</em> and
+						<em>Sales Tax Automation</em>. I specialize in <strong>Python</strong> and <strong>Java</strong> — architecting
+						microservices with <strong>FastAPI</strong> and <strong>Spring Boot</strong>, deploying cloud-native solutions on
+						<strong>AWS</strong>, and shipping systems that handle hundreds of millions of records reliably.
+					</p>
+					<p>
+						I've led engineering teams, modernized legacy platforms, built real-time data pipelines with Kafka, and
+						contributed to open-source projects. I hold a <strong>BSc in Computer Science &amp; Engineering</strong>
+						from Bangladesh University of Engineering &amp; Technology (BUET) and am a
+						<strong>Blockchain &amp; Web Security Hackathon Champion</strong>.
+					</p>
+
+					<!-- stat strip -->
+					<div class="stat-strip">
+						<div class="stat-item">
+							<span class="num">6+</span>
+							<span class="lbl">Years Experience</span>
+						</div>
+						<div class="stat-item">
+							<span class="num">4</span>
+							<span class="lbl">Countries Worked</span>
+						</div>
+						<div class="stat-item">
+							<span class="num">129M+</span>
+							<span class="lbl">Records Processed</span>
+						</div>
+						<div class="stat-item">
+							<span class="num">12+</span>
+							<span class="lbl">Integrations Built</span>
+						</div>
+						<div class="stat-item">
+							<span class="num">30%</span>
+							<span class="lbl">Perf. Improvement</span>
+						</div>
+					</div>
 				</div>
 			</div>
-		<div class="row">
-			
-			<div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="https://github.com/aang13" class="services-1 shadow">
-					<span class="icon">
-						<i class="icon-github"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">GitHub</h3>
-					</div>
-				</a>
+
+			<!-- social links -->
+			<div class="row">
+				<div class="col-md-3 text-center d-flex ftco-animate">
+					<a href="https://github.com/aang13" target="_blank" class="services-1 shadow">
+						<span class="icon"><i class="icon-github"></i></span>
+						<div class="desc"><h3 class="mb-5">GitHub</h3></div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center d-flex ftco-animate">
+					<a href="https://www.linkedin.com/in/moinul" target="_blank" class="services-1 shadow">
+						<span class="icon"><i class="icon-linkedin"></i></span>
+						<div class="desc"><h3 class="mb-5">LinkedIn</h3></div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center d-flex ftco-animate">
+					<a href="https://aang13.medium.com/" target="_blank" class="services-1 shadow">
+						<span class="icon"><i class="icon-medium"></i></span>
+						<div class="desc"><h3 class="mb-5">Medium</h3></div>
+					</a>
+				</div>
+				<div class="col-md-3 text-center d-flex ftco-animate">
+					<a href="https://stackoverflow.com/users/11940561/aang13" target="_blank" class="services-1 shadow">
+						<span class="icon"><i class="icon-globe"></i></span>
+						<div class="desc"><h3 class="mb-4">Stack Overflow</h3></div>
+					</a>
+				</div>
 			</div>
-			<div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="https://twitter.com/MdMoinu01875401" class="services-1 shadow">
-					<span class="icon">
-						<i class="icon-twitter"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">Twitter</h3>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 text-center d-flex ftco-animate">
-				<a href="https://aang13.medium.com/" class="services-1 shadow">
-					<span class="icon">
-						<i class="icon-medium"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-5">Medium</h3>
-					</div>
-				</a>
-			</div>
-			<div class="col-md-4 text-center d-flex ftco-animate fadeInUp ftco-animated">
-				<a href="https://stackoverflow.com/users/11940561/aang13" class="services-1 shadow">
-					<span class="icon">
-						<i class="icon-globe"></i>
-					</span>
-					<div class="desc">
-						<h3 class="mb-4">StackOverflow</h3>
-					</div>
-				</a>
-			</div>
-		</div>
 		</div>
 	</section>
 
+	<!-- ══════════════ RESUME ══════════════ -->
 	<section class="ftco-section ftco-no-pb goto-here" id="resume-section">
 		<div class="container">
+			<div class="row justify-content-center mb-5">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Resume</h1>
+					<h2 class="mb-4">My Resume</h2>
+				</div>
+			</div>
 			<div class="row">
 				<div class="col-md-3">
 					<nav id="navi">
@@ -146,301 +365,533 @@
 							<li><a href="#page-1">Experience</a></li>
 							<li><a href="#page-2">Education</a></li>
 							<li><a href="#page-3">Skills</a></li>
-							<li><a href="#page-4">Awards</a></li>
+							<li><a href="#page-4">Achievements</a></li>
 						</ul>
 					</nav>
 				</div>
 				<div class="col-md-9">
+
+					<!-- ── Experience ── -->
 					<div id="page-1" class="page one">
 						<h2 class="heading">Experience</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
+
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">Senior Software Engineer</h3>
+								<span class="exp-date">Oct 2023 – Present · 2 yrs 9 mos</span>
 							</div>
-							<div class="text pl-3">
-								<span class="date">January 2024 - Current | 1 Yr 4 Months</span>
-								<h2>Senior Backend Engineer</h2>
-								<span class="position">Kintsugi AI Inc, US(Remote)</span>
+							<div class="exp-company">Kintsugi AI Inc &nbsp;·&nbsp; United States (Remote)</div>
+							<div style="margin-top:6px;">
+								<span class="tag-pill">FastAPI</span>
+								<span class="tag-pill">Alembic</span>
+								<span class="tag-pill">React</span>
+								<span class="tag-pill">AWS</span>
+								<span class="tag-pill">Docker</span>
 							</div>
+							<ul>
+								<li>Building automated sales tax compliance platform serving US businesses.</li>
+								<li>Engineered address validation pipeline processing <strong>129M+ records</strong> with high accuracy.</li>
+								<li>Implemented complex US tax rules engine covering multi-state tax scenarios.</li>
+							</ul>
 						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
+
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">Senior Software Engineer</h3>
+								<span class="exp-date">Aug 2022 – Jan 2024 · 1 yr 5 mos</span>
 							</div>
-							<div class="text pl-3">
-								<span class="date">August 2022- January 2024 | 1 Yr 6 Months</span>
-								<h2>Senior Web Developer</h2>
-								<span class="position">Everforth Co Jp, Japan(Remote)</span>
+							<div class="exp-company">Everforth Co. Jp &nbsp;·&nbsp; Japan (Remote)</div>
+							<div style="margin-top:6px;">
+								<span class="tag-pill">Spring Boot</span>
+								<span class="tag-pill">FastAPI</span>
+								<span class="tag-pill">React</span>
+								<span class="tag-pill">AWS</span>
+								<span class="tag-pill">Kafka</span>
 							</div>
+							<ul>
+								<li>Led a team of <strong>8 engineers</strong> on an e-commerce platform used across Japan.</li>
+								<li>Transformed a legacy ASP Classic / VBScript fintech platform into a modern microservices architecture.</li>
+								<li>Designed and delivered full-stack features for a fintech platform (frontend + backend).</li>
+								<li>Built ACH payment feature enabling B2B cross-border transactions.</li>
+							</ul>
 						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
+
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">Software Engineer</h3>
+								<span class="exp-date">Feb 2021 – Aug 2022 · 1 yr 4 mos</span>
 							</div>
-							<div class="text pl-3">
-								<span class="date">May 2021- Current | 1 Yr 3 Months</span>
-								<h2>Software Engineer</h2>
-								<span class="position">Marginedge, US(remote)</span>
+							<div class="exp-company">MarginEdge &nbsp;·&nbsp; United States (Remote) &nbsp;via&nbsp; Tekarsh, BD</div>
+							<div style="margin-top:6px;">
+								<span class="tag-pill">Spring Boot</span>
+								<span class="tag-pill">React</span>
+								<span class="tag-pill">AngularJS</span>
+								<span class="tag-pill">AWS</span>
 							</div>
+							<ul>
+								<li>Built <strong>12 POS and 4 accounting integrations</strong> for US restaurant automation.</li>
+								<li>Created real-time reports across multiple accounting systems to automate business workflows.</li>
+								<li>Improved data fetching throughput by <strong>20%</strong> through pipeline optimisation.</li>
+							</ul>
 						</div>
-						<!-- <div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
+
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">Software Engineer</h3>
+								<span class="exp-date">May 2019 – Jan 2021 · 1 yr 9 mos</span>
 							</div>
-							<div class="text pl-3">
-								<span class="date">Feb 2021-May 2021 | 2 Months</span>
-								<h2>Software Engineer</h2>
-								<span class="position">Reve Chat</span>
+							<div class="exp-company">Emerging IT Bangladesh Ltd &nbsp;·&nbsp; Dhaka, Bangladesh</div>
+							<div style="margin-top:6px;">
+								<span class="tag-pill">Spring Boot</span>
+								<span class="tag-pill">Angular</span>
+								<span class="tag-pill">Docker</span>
+								<span class="tag-pill">PostgreSQL</span>
 							</div>
-						</div> -->
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">May 2019-April 2021 | 2 Yrs</span>
-								<h2>Software Engineer</h2>
-								<span class="position">Emerging IT Bangladesh Ltd, Bangladesh(Onsite)</span>
-							</div>
+							<ul>
+								<li>Designed and built an EdTech platform from scratch covering live class, exams, and video library.</li>
+								<li>Achieved <strong>99.99% uptime</strong> handling thousands of daily requests.</li>
+								<li>Reduced system response time by <strong>30%</strong> via database indexing and Redis caching.</li>
+								<li>Collaborated with Product Owner on sprint planning and feature prioritization.</li>
+							</ul>
 						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
+
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">Data Science Trainee</h3>
+								<span class="exp-date">Sept 2019 – Dec 2019 · 3 mos</span>
 							</div>
-							<div class="text pl-3">
-								<span class="date">Sept 2019-Dec 2019 | 3 Months</span>
-								<h2>Data Science Trainee</h2>
-								<span class="position">Fujitsu Research Institute,Japan(Onsite)</span>
+							<div class="exp-company">Fujitsu Research Institute &nbsp;·&nbsp; Japan (Onsite)</div>
+							<div style="margin-top:6px;">
+								<span class="tag-pill">Python</span>
+								<span class="tag-pill">Pandas</span>
+								<span class="tag-pill">Scikit-learn</span>
+								<span class="tag-pill">TensorFlow</span>
 							</div>
+							<ul>
+								<li>Performed descriptive and multivariate statistical analyses on large datasets.</li>
+								<li>Applied ML techniques for feature selection and classifier optimisation.</li>
+								<li>Produced tables, graphs, and written reports summarising research findings.</li>
+							</ul>
+						</div>
+
+						<!-- Technical Writer -->
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">Technical Writer</h3>
+								<span class="exp-date">May 2021 – Dec 2021 · 8 mos</span>
+							</div>
+							<div class="exp-company">Baeldung &nbsp;·&nbsp; Remote</div>
+							<div style="margin-top:6px;">
+								<span class="tag-pill">Java</span>
+								<span class="tag-pill">Spring Boot</span>
+								<span class="tag-pill">Technical Writing</span>
+							</div>
+							<ul>
+								<li>Wrote Java and Spring Boot articles for Baeldung — one of the leading Java learning platforms globally.</li>
+								<li>Published article: <a href="https://www.baeldung.com/postman-websocket-apis" target="_blank" style="color:#F96D00;">Test WebSocket APIs with Postman</a>.</li>
+							</ul>
 						</div>
 					</div>
+
+					<!-- ── Education ── -->
 					<div id="page-2" class="page two">
 						<h2 class="heading">Education</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">BSc in Computer Science &amp; Engineering</h3>
+								<span class="exp-date">2015 – 2019</span>
 							</div>
-							<div class="text pl-3">
-								<span class="date">2015-2019</span>
-								<h2>Bachelor of Science in Computer Science & Engineering</h2>
-								<span class="position">Bangladesh University of Engineering & Technology</span>
-							</div>
+							<div class="exp-company">Bangladesh University of Engineering and Technology (BUET)</div>
+							<p style="margin-top:8px; font-size:0.85rem; color:#666;">One of the top-ranked engineering universities in Bangladesh. Coursework covered algorithms, data structures, distributed systems, AI, and software engineering.</p>
 						</div>
-						
+
+						<h2 class="heading mt-4">Certifications</h2>
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">Neural Networks and Deep Learning</h3>
+							</div>
+							<div class="exp-company">Coursera · deeplearning.ai</div>
+						</div>
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">AWS Fundamentals: Going Cloud-Native</h3>
+							</div>
+							<div class="exp-company">Coursera · Amazon Web Services</div>
+						</div>
+						<div class="exp-card ftco-animate">
+							<div class="exp-meta">
+								<h3 class="exp-title">Building Scalable Java Microservices with Spring Boot &amp; Spring Cloud</h3>
+							</div>
+							<div class="exp-company">Coursera · Google Cloud</div>
+						</div>
 					</div>
+
+					<!-- ── Skills ── -->
 					<div id="page-3" class="page three">
 						<h2 class="heading">Skills</h2>
-						<div class="skills-container">
-							<div class="skill-category text-left pl-3">
-								<h3 style="color: blue">Programming Languages</h3>
-								<div class="skill-items">
-									<span class="skill-item">Python,</span>
-									<span class="skill-item">Java,</span>
-									<span class="skill-item">JavaScript,</span>
-									<span class="skill-item">TypeScript,</span>
-									<span class="skill-item">C,</span>
-									<span class="skill-item">C++</span>
-								</div>
-							</div>
 
-							<div class="skill-category text-left pl-3">
-								<h3 style="color: blue">Database</h3>
-								<div class="skill-items">
-									<span class="skill-item">PostgreSQL,</span>
-									<span class="skill-item">MySQL,</span>
-									<span class="skill-item">MongoDB,</span>
-									<span class="skill-item">Redis,</span>
-									<span class="skill-item">DynamoDB</span>
-								</div>
-							</div>
+						<div class="text-left pl-2 mb-4">
+							<h5 style="color:#F96D00; font-weight:700; margin-bottom:8px;">Languages</h5>
+							<span class="skill-badge">Python</span>
+							<span class="skill-badge">Java</span>
+							<span class="skill-badge">JavaScript</span>
+							<span class="skill-badge">TypeScript</span>
+							<span class="skill-badge">C</span>
+							<span class="skill-badge">C++</span>
+						</div>
 
-							<div class="skill-category text-left pl-3">
-								<h3 style="color: blue">Framework</h3>
-								<div class="skill-items">
-									<span class="skill-item">FastAPI,</span>
-									<span class="skill-item">Spring Boot,</span>
-									<span class="skill-item">React,</span>
-									<span class="skill-item">Angular</span>
-								</div>
-							</div>
+						<div class="text-left pl-2 mb-4">
+							<h5 style="color:#F96D00; font-weight:700; margin-bottom:8px;">Frameworks</h5>
+							<span class="skill-badge">FastAPI</span>
+							<span class="skill-badge">Spring Boot</span>
+							<span class="skill-badge">React</span>
+							<span class="skill-badge">Angular</span>
+							<span class="skill-badge">Django REST</span>
+							<span class="skill-badge">Spring Cloud</span>
+						</div>
 
-							<div class="skill-category text-left pl-3">
-								<h3 style="color: blue">Cloud & DevOps</h3>
-								<div class="skill-items">
-									<span class="skill-item">AWS,</span>
-									<span class="skill-item">Docker,</span>
-									<span class="skill-item">Git,</span>
-									<span class="skill-item">GitHub,</span>
-									<span class="skill-item">Bitbucket,</span>
-									<span class="skill-item">CI/CD</span>
-								</div>
-							</div>
+						<div class="text-left pl-2 mb-4">
+							<h5 style="color:#F96D00; font-weight:700; margin-bottom:8px;">Databases</h5>
+							<span class="skill-badge">PostgreSQL</span>
+							<span class="skill-badge">MySQL</span>
+							<span class="skill-badge">MongoDB</span>
+							<span class="skill-badge">Redis</span>
+							<span class="skill-badge">DynamoDB</span>
+						</div>
 
-							<div class="skill-category text-left pl-3">
-								<h3 style="color: blue">Technology</h3>
-								<div class="skill-items">
-									<span class="skill-item">Microservices.</span>
-									<span class="skill-item">Maven,</span>
-									<span class="skill-item">OAuth,</span>
-									<span class="skill-item">Alembic,</span>
-									<span class="skill-item">SQLAlchemy,</span>
-									<span class="skill-item">Pydantic,</span>
-									<span class="skill-item">Kafka,</span>
-									<span class="skill-item">JUnit,</span>
-									<span class="skill-item">Spring Cloud,</span>
-									<span class="skill-item">API Gateway,</span>
-									<span class="skill-item">Swagger,</span>
-									<span class="skill-item">Postman</span>
-								</div>
-							</div>
+						<div class="text-left pl-2 mb-4">
+							<h5 style="color:#F96D00; font-weight:700; margin-bottom:8px;">Cloud &amp; DevOps</h5>
+							<span class="skill-badge">AWS</span>
+							<span class="skill-badge">Docker</span>
+							<span class="skill-badge">Git</span>
+							<span class="skill-badge">GitHub Actions</span>
+							<span class="skill-badge">Bitbucket</span>
+							<span class="skill-badge">CI/CD</span>
+						</div>
 
-							<div class="skill-category text-left pl-3">
-								<h3 style="color: blue">Tools & Communication</h3>
-								<div class="skill-items">
-									<span class="skill-item">PostHog,</span>
-									<span class="skill-item">Prometheus,</span>
-									<span class="skill-item">Slack,</span>
-									<span class="skill-item">JIRA,</span>
-									<span class="skill-item">Grafana,</span>
-									<span class="skill-item">English</span>
-								</div>
-							</div>
+						<div class="text-left pl-2 mb-4">
+							<h5 style="color:#F96D00; font-weight:700; margin-bottom:8px;">Architecture &amp; Tooling</h5>
+							<span class="skill-badge">Microservices</span>
+							<span class="skill-badge">Kafka</span>
+							<span class="skill-badge">OAuth 2.0</span>
+							<span class="skill-badge">API Gateway</span>
+							<span class="skill-badge">SQLAlchemy</span>
+							<span class="skill-badge">Alembic</span>
+							<span class="skill-badge">Pydantic</span>
+							<span class="skill-badge">Maven</span>
+							<span class="skill-badge">JUnit</span>
+							<span class="skill-badge">Swagger</span>
+							<span class="skill-badge">Postman</span>
+							<span class="skill-badge">Prometheus</span>
+							<span class="skill-badge">Grafana</span>
+							<span class="skill-badge">PostHog</span>
 						</div>
 					</div>
+
+					<!-- ── Achievements ── -->
 					<div id="page-4" class="page four">
-						<h2 class="heading">Awards</h2>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2019</span>
-								<h2>12 IT Hi-Tech park training on Data Science, ML, AI ,Cyber Security, IoT, Blockchain
-								</h2>
-								<span class="position">ICT Ministry, Bangladesh & FRI, Japan</span>
+						<h2 class="heading">Achievements &amp; Recognition</h2>
+
+						<div class="achievement-item ftco-animate">
+							<div class="achievement-icon">🥇</div>
+							<div class="achievement-body">
+								<h4>Gold Level — Problem Solving</h4>
+								<p>HackerRank &nbsp;·&nbsp; Competitive programming recognition</p>
 							</div>
 						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
-							</div>
-							<div class="text pl-3">
-								<span class="date">2019</span>
-								<h2>Hackathon on BlockChain and Web Security</h2>
-								<span class="position">BUET CSE Fest </span>
-								<p>Champion</p>
+
+						<div class="achievement-item ftco-animate">
+							<div class="achievement-icon">🏆</div>
+							<div class="achievement-body">
+								<h4>Champion — Hackathon on Blockchain &amp; Web Security</h4>
+								<p>BUET CSE Fest &nbsp;·&nbsp; 2019</p>
 							</div>
 						</div>
-						<div class="resume-wrap d-flex ftco-animate">
-							<div class="icon d-flex align-items-center justify-content-center">
-								<span class="flaticon-ideas"></span>
+
+						<div class="achievement-item ftco-animate">
+							<div class="achievement-icon">🥈</div>
+							<div class="achievement-body">
+								<h4>1st Runner-Up — Battle of Hardware (IoT)</h4>
+								<p>BUET CSE Fest &nbsp;·&nbsp; 2018</p>
 							</div>
-							<div class="text pl-3">
-								<span class="date">2018</span>
-								<h2>Battle of Hardware (IoT)</h2>
-								<span class="position">BUET CSE Fest </span>
-								<p>1st RunnerUp</p>
+						</div>
+
+						<div class="achievement-item ftco-animate">
+							<div class="achievement-icon">🎓</div>
+							<div class="achievement-body">
+								<h4>Data Science, ML, AI, Cyber Security, IoT &amp; Blockchain Training</h4>
+								<p>Bangladesh Govt · 12 IT Hi-Tech Park &amp; Fujitsu Research Institute, Japan &nbsp;·&nbsp; 2019</p>
+							</div>
+						</div>
+
+						<!-- Open Source contribution strip -->
+						<div class="oss-strip ftco-animate">
+							<div class="oss-icon">🔧</div>
+							<div>
+								<h4>Open Source Contributor</h4>
+								<p>Contributed to <a href="https://github.com/eugenp/tutorials" target="_blank">eugenp/tutorials</a> on GitHub — the Baeldung articles code base with 37k+ stars.</p>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
+
+				</div><!-- /col-md-9 -->
+			</div><!-- /row -->
 		</div>
 	</section>
 
+	<!-- ══════════════ PROJECTS ══════════════ -->
 	<section class="ftco-section" id="projects-section">
 		<div class="container">
-			<div class="row justify-content-center mb-5 pb-5">
+			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Projects</h1>
-					<h2 class="mb-4">Projects I've worked on</h2>
+					<h2 class="mb-4">Things I've Built</h2>
+					<p>A mix of professional products, personal side-projects, and open-source demos.</p>
 				</div>
 			</div>
-			<div class="row d-flex">
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a  class="block-20"
-							style="background-image: url('images/emergingStudy.png');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<h3 class="heading">Emerging Study</a>
-							</h3>
-							<p>Built an online educational system for students to learn various topics of interest.
-								Features include live class, video library, online exam, and practice programming.</p>
+			<div class="row">
+
+				<!-- Kintsugi AI — Sales Tax Automation -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="proj-card">
+						<div class="proj-img" style="background-image:url('images/MarginEdge.png');">
+							<span class="proj-category">Fintech · SaaS</span>
+						</div>
+						<div class="proj-body">
+							<h3>Sales Tax Automation</h3>
+							<p>End-to-end US sales tax compliance platform at Kintsugi AI Inc. Validates 129M+ addresses, applies complex multi-state tax rules, and automates filings for businesses.</p>
+							<div>
+								<span class="tag-pill">FastAPI</span>
+								<span class="tag-pill">React</span>
+								<span class="tag-pill">AWS</span>
+								<span class="tag-pill">Alembic</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry justify-content-end">
-						<a  class="block-20" style="background-image: url('images/ReveChat.png');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<h3 class="heading">Reve Chat</a>
-							</h3>
-							<p>Corporate Messaging solution with voice call & video call features for web, android, ios
-								platform.</p>
+
+				<!-- Everforth — Fintech Platform -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="proj-card">
+						<div class="proj-img" style="background-image:url('images/image_1.jpg');">
+							<span class="proj-category">Fintech · Microservices</span>
+						</div>
+						<div class="proj-body">
+							<h3>Legacy Fintech Modernisation</h3>
+							<p>Led migration of a legacy ASP Classic / VBScript fintech platform to microservices at Everforth, Japan. Delivered ACH payment integration and full-stack features as team lead of 8 engineers.</p>
+							<div>
+								<span class="tag-pill">Spring Boot</span>
+								<span class="tag-pill">FastAPI</span>
+								<span class="tag-pill">Kafka</span>
+								<span class="tag-pill">AWS</span>
+							</div>
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4 d-flex ftco-animate">
-					<div class="blog-entry">
-						<a  class="block-20" style="background-image: url('images/MarginEdge.png');">
-						</a>
-						<div class="text mt-3 float-right d-block">
-							<h3 class="heading">MarginEdge</a>
-							</h3>
-							<p>ERP solution for Restaurants & Data analytics tool.</p>
+
+				<!-- MarginEdge -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="proj-card">
+						<div class="proj-img" style="background-image:url('images/MarginEdge.png');">
+							<span class="proj-category">Restaurant Tech</span>
+						</div>
+						<div class="proj-body">
+							<h3>MarginEdge</h3>
+							<p>Restaurant ERP and analytics platform. Built 12 POS integrations and 4 accounting integrations automating financial workflows for US restaurants. Improved data throughput by 20%.</p>
+							<div>
+								<span class="tag-pill">Spring Boot</span>
+								<span class="tag-pill">React</span>
+								<span class="tag-pill">AngularJS</span>
+								<span class="tag-pill">AWS</span>
+							</div>
+							<div class="proj-links">
+								<a href="https://www.marginedge.com" target="_blank" class="btn-demo">Live Site</a>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+
+				<!-- Emerging Study -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="proj-card">
+						<div class="proj-img" style="background-image:url('images/emergingStudy.png');">
+							<span class="proj-category">EdTech</span>
+						</div>
+						<div class="proj-body">
+							<h3>Emerging Study</h3>
+							<p>Online educational platform with live classes, video library, online exams, and a practice programming environment. Achieved 99.99% uptime handling thousands of daily requests.</p>
+							<div>
+								<span class="tag-pill">FastAPI</span>
+								<span class="tag-pill">React</span>
+								<span class="tag-pill">PostgreSQL</span>
+								<span class="tag-pill">Docker</span>
+								<span class="tag-pill">AWS</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Kid Wise -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="proj-card">
+						<div class="proj-img" style="background-color:#e8f4fd; display:flex; align-items:center; justify-content:center;">
+							<span style="font-size:4rem;">📚</span>
+							<span class="proj-category">EdTech · Personal</span>
+						</div>
+						<div class="proj-body">
+							<h3>Kid Wise</h3>
+							<p>Study planner application for working parents to create, monitor and manage their children's study progress. Features lesson plans, quizzes, exams and a child progress dashboard.</p>
+							<div>
+								<span class="tag-pill">Spring Boot</span>
+								<span class="tag-pill">Java</span>
+								<span class="tag-pill">React</span>
+								<span class="tag-pill">PostgreSQL</span>
+								<span class="tag-pill">OAuth2</span>
+								<span class="tag-pill">Docker</span>
+							</div>
+							<div class="proj-links">
+								<a href="https://github.com/aang13/kid-wise" target="_blank" class="btn-gh">GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Pizza Express -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="proj-card">
+						<div class="proj-img" style="background-color:#fff3e0; display:flex; align-items:center; justify-content:center;">
+							<span style="font-size:4rem;">🍕</span>
+							<span class="proj-category">On-Demand · Python</span>
+						</div>
+						<div class="proj-body">
+							<h3>Pizza Express</h3>
+							<p>On-demand pizza delivery app that matches customers with nearby vendors using geolocation. Custom user auth via mobile number, REST API-driven order management.</p>
+							<div>
+								<span class="tag-pill">Django</span>
+								<span class="tag-pill">Django REST</span>
+								<span class="tag-pill">Python</span>
+								<span class="tag-pill">Geolocation</span>
+							</div>
+							<div class="proj-links">
+								<a href="https://github.com/aang13/pizza-express" target="_blank" class="btn-gh">GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- FastAPI Skeleton -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="proj-card">
+						<div class="proj-img" style="background-color:#e8ffe8; display:flex; align-items:center; justify-content:center;">
+							<span style="font-size:4rem;">⚡</span>
+							<span class="proj-category">Open Source · Template</span>
+						</div>
+						<div class="proj-body">
+							<h3>FastAPI Skeleton with Tests</h3>
+							<p>A production-ready FastAPI starter template demonstrating unit and integration testing best practices with testcontainers, pytest, and CI-ready configurations.</p>
+							<div>
+								<span class="tag-pill">FastAPI</span>
+								<span class="tag-pill">Python</span>
+								<span class="tag-pill">pytest</span>
+								<span class="tag-pill">testcontainers</span>
+								<span class="tag-pill">PostgreSQL</span>
+							</div>
+							<div class="proj-links">
+								<a href="https://github.com/aang13/fastAPI_skeleton_with_test" target="_blank" class="btn-gh">GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Vibely -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="proj-card">
+						<div class="proj-img" style="background-color:#f0e8ff; display:flex; align-items:center; justify-content:center;">
+							<span style="font-size:4rem;">🎵</span>
+							<span class="proj-category">Personal</span>
+						</div>
+						<div class="proj-body">
+							<h3>Vibely</h3>
+							<p>A social / media-sharing side project built with Ruby. Exploring new languages and frameworks outside the day-to-day stack.</p>
+							<div>
+								<span class="tag-pill">Ruby</span>
+							</div>
+							<div class="proj-links">
+								<a href="https://github.com/aang13/vibely" target="_blank" class="btn-gh">GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- React Admin Dashboard -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="proj-card">
+						<div class="proj-img" style="background-color:#e8f0ff; display:flex; align-items:center; justify-content:center;">
+							<span style="font-size:4rem;">📊</span>
+							<span class="proj-category">Frontend</span>
+						</div>
+						<div class="proj-body">
+							<h3>React Admin Dashboard</h3>
+							<p>A feature-rich admin dashboard template built with React — charts, tables, and responsive UI components, useful as a starting point for data-heavy admin panels.</p>
+							<div>
+								<span class="tag-pill">React</span>
+								<span class="tag-pill">JavaScript</span>
+							</div>
+							<div class="proj-links">
+								<a href="https://github.com/aang13/react-admin-dashboard" target="_blank" class="btn-gh">GitHub</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div><!-- /row -->
 		</div>
 	</section>
 
+	<!-- ══════════════ BLOG ══════════════ -->
 	<section class="ftco-section" id="blog-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-5">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Blog</h1>
-					<h2 class="mb-4">My Blog</h2>
+					<h2 class="mb-4">My Writing</h2>
+					<p>Articles on Java, Spring Boot, architecture, and databases — published on Medium and Baeldung.</p>
 				</div>
 			</div>
 			<div class="row d-flex">
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="https://aang13.medium.com/hexagonal-architecture-in-java-ae05a6c13b4" class="block-20" style="background-image: url('images/image_1.jpg');">
-						</a>
+						<a href="https://aang13.medium.com/hexagonal-architecture-in-java-ae05a6c13b4" target="_blank" class="block-20" style="background-image: url('images/image_1.jpg');"></a>
 						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a
-									href="https://aang13.medium.com/hexagonal-architecture-in-java-ae05a6c13b4">Hexagonal
-									Architecture in Java</a>
+							<span class="blog-tag">Architecture · Medium</span>
+							<h3 class="heading">
+								<a href="https://aang13.medium.com/hexagonal-architecture-in-java-ae05a6c13b4" target="_blank">Hexagonal Architecture in Java</a>
 							</h3>
-							
+							<p style="font-size:0.85rem; color:#666;">A deep dive into ports-and-adapters design for building maintainable Java applications.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry justify-content-end">
-						<a href="https://aang13.medium.com/mongodb-replica-set-6c94f1ffce1b" class="block-20"
-							style="background-image: url('images/image_2.jpg');">
-						</a>
+						<a href="https://aang13.medium.com/mongodb-replica-set-6c94f1ffce1b" target="_blank" class="block-20" style="background-image: url('images/image_2.jpg');"></a>
 						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a
-									href="https://aang13.medium.com/mongodb-replica-set-6c94f1ffce1b">MongoDB Replica
-									Set</a>
+							<span class="blog-tag">Database · Medium</span>
+							<h3 class="heading">
+								<a href="https://aang13.medium.com/mongodb-replica-set-6c94f1ffce1b" target="_blank">MongoDB Replica Set</a>
 							</h3>
+							<p style="font-size:0.85rem; color:#666;">Setting up and managing a MongoDB replica set for high-availability production workloads.</p>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-4 d-flex ftco-animate">
 					<div class="blog-entry">
-						<a href="https://www.baeldung.com/postman-websocket-apis" class="block-20"
-							style="background-image: url('images/image_3.jpg');">
-						</a>
+						<a href="https://www.baeldung.com/postman-websocket-apis" target="_blank" class="block-20" style="background-image: url('images/image_3.jpg');"></a>
 						<div class="text mt-3 float-right d-block">
-							<h3 class="heading"><a href="https://www.baeldung.com/postman-websocket-apis">Test Web
-									Socket with Postman</a>
+							<span class="blog-tag">API Testing · Baeldung</span>
+							<h3 class="heading">
+								<a href="https://www.baeldung.com/postman-websocket-apis" target="_blank">Test WebSocket APIs with Postman</a>
 							</h3>
+							<p style="font-size:0.85rem; color:#666;">Step-by-step guide to testing WebSocket endpoints using Postman. Published on Baeldung.</p>
 						</div>
 					</div>
 				</div>
@@ -448,36 +899,40 @@
 		</div>
 	</section>
 
+	<!-- ══════════════ HIRE ME ══════════════ -->
 	<section class="ftco-section ftco-hireme img" style="background-image: url(images/bg_1.jpg)">
 		<div class="overlay"></div>
 		<div class="container">
 			<div class="row justify-content-center">
-				<div class="col-md-7 ftco-animate text-center">
-					<h2>I'm <span>Available</span> for remote/onsite position</h2>
-					<p class="mb-0"><a href="mailto:mdmoinulh13@gmail.com" class="btn btn-primary py-3 px-5">Hire me</a>
-					</p>
-					<br/>
-				</div>
-				<br/>
-				<div class="col-md-7 ftco-animate text-center">
-					<div class="text">
-						<p><a href="/images/MdMoinulHossainCV.pdf" class="btn btn-primary py-3 px-3"
-								download="MdMoinulHossainCV">Download CV</a></p>
+				<div class="col-md-8 ftco-animate text-center">
+					<h2>I'm <span>Available</span> for Remote &amp; Onsite Roles</h2>
+					<p style="color:rgba(255,255,255,0.8); margin-bottom:1.5rem;">Open to full-time positions and consulting engagements in Backend Engineering, Microservices Architecture, and Platform Development.</p>
+					<div class="hireme-badges">
+						<span>🐍 Python / FastAPI</span>
+						<span>☕ Java / Spring Boot</span>
+						<span>☁️ AWS / Cloud</span>
+						<span>🏗️ Microservices</span>
+						<span>⚡ Kafka / Streaming</span>
 					</div>
+					<p class="mt-4 mb-2">
+						<a href="mailto:mdmoinulh13@gmail.com" class="btn btn-primary py-3 px-5 mr-2">Hire Me</a>
+						<a href="/images/MdMoinulHossainCV.pdf" download="MdMoinulHossainCV" class="btn btn-white btn-outline-white py-3 px-4">Download CV</a>
+					</p>
 				</div>
 			</div>
 		</div>
 	</section>
 
+	<!-- ══════════════ CONTACT ══════════════ -->
 	<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
 		<div class="container">
 			<div class="row justify-content-center mb-5 pb-3">
 				<div class="col-md-7 heading-section text-center ftco-animate">
 					<h1 class="big big-2">Contact</h1>
-					<h2 class="mb-4">Contact Me</h2>
+					<h2 class="mb-4">Get In Touch</h2>
+					<p>Whether you have a project in mind, a role to fill, or just want to say hi — I'd love to hear from you.</p>
 				</div>
 			</div>
-
 			<div class="row d-flex contact-info mb-5">
 				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
 					<div class="align-self-stretch box text-center p-4 shadow">
@@ -485,8 +940,8 @@
 							<span class="icon-map-signs"></span>
 						</div>
 						<div>
-							<h3 class="mb-4">Address</h3>
-							<p>Mirpur DOHS, Dhaka-1216</p>
+							<h3 class="mb-4">Location</h3>
+							<p>Mirpur DOHS, Dhaka-1216, Bangladesh</p>
 						</div>
 					</div>
 				</div>
@@ -496,8 +951,8 @@
 							<span class="icon-phone2"></span>
 						</div>
 						<div>
-							<h3 class="mb-4">Contact Number</h3>
-							<p><a href="tel://8801553544385">+8801553544385</a></p>
+							<h3 class="mb-4">Phone</h3>
+							<p><a href="tel:+8801553544385">+880 155 354 4385</a></p>
 						</div>
 					</div>
 				</div>
@@ -507,105 +962,36 @@
 							<span class="icon-paper-plane"></span>
 						</div>
 						<div>
-							<h3 class="mb-4">Email Address</h3>
+							<h3 class="mb-4">Email</h3>
 							<p><a href="mailto:mdmoinulh13@gmail.com">mdmoinulh13@gmail.com</a></p>
 						</div>
 					</div>
 				</div>
-				<!-- <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
 					<div class="align-self-stretch box text-center p-4 shadow">
 						<div class="icon d-flex align-items-center justify-content-center">
-							<span class="icon-globe"></span>
+							<span class="icon-github"></span>
 						</div>
 						<div>
-							<h3 class="mb-4">Website</h3>
-							<p><a href="#">Coming Soon!</a></p>
+							<h3 class="mb-4">GitHub</h3>
+							<p><a href="https://github.com/aang13" target="_blank">github.com/aang13</a></p>
 						</div>
 					</div>
-				</div> -->
+				</div>
 			</div>
-
-		
 		</div>
 	</section>
 
-	<!-- 
-    <footer class="ftco-footer ftco-section">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">About</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Home</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Services</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Projects</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Services</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Design</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Web Development</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Business Strategy</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Data Analysis</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Graphic Design</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-12 text-center"> -->
-
-	<p>
-		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-		Copyright &copy;
-		<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i
-			class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com"
-			target="_blank">Colorlib</a>
-		<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	<p style="text-align:center; padding:1rem 0; color:#aaa; font-size:0.8rem;">
+		Copyright &copy; <script>document.write(new Date().getFullYear());</script> Md Moinul Hossain · Template by
+		<a href="https://colorlib.com" target="_blank">Colorlib</a>
 	</p>
-	<!-- </div>
-        </div>
-      </div>
-    </footer> -->
-
-
 
 	<!-- loader -->
 	<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
 			<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
-			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
-				stroke="#F96D00" />
+			<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" />
 		</svg></div>
-
 
 	<script src="js/jquery.min.js"></script>
 	<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -619,9 +1005,7 @@
 	<script src="js/aos.js"></script>
 	<script src="js/jquery.animateNumber.min.js"></script>
 	<script src="js/scrollax.min.js"></script>
-
 	<script src="js/main.js"></script>
 
 </body>
-
 </html>
