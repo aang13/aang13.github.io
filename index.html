@@ -209,6 +209,57 @@
 			font-weight: 600;
 		}
 
+
+		/* ── travel cards ── */
+		.travel-card {
+			background: #fff;
+			border-radius: 14px;
+			box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+			overflow: hidden;
+			height: 100%;
+			transition: transform .25s, box-shadow .25s;
+			display: flex;
+			flex-direction: column;
+		}
+		.travel-card:hover { transform: translateY(-6px); box-shadow: 0 12px 35px rgba(0,0,0,0.14); }
+		.travel-flag {
+			font-size: 4rem;
+			text-align: center;
+			padding: 1.8rem 1rem 1rem;
+			background: linear-gradient(135deg, #fff8f3 0%, #fff3e8 100%);
+			line-height: 1;
+		}
+		.travel-body { padding: 1.2rem 1.4rem 1.4rem; flex: 1; display: flex; flex-direction: column; }
+		.travel-country { font-size: 1.3rem; font-weight: 800; margin: 0 0 0.6rem; color: #222; }
+		.travel-years { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.8rem; }
+		.travel-year-badge {
+			background: #F96D00;
+			color: #fff;
+			font-size: 0.72rem;
+			font-weight: 700;
+			padding: 3px 10px;
+			border-radius: 20px;
+			letter-spacing: 0.5px;
+		}
+		.travel-desc { font-size: 0.85rem; color: #666; line-height: 1.65; flex: 1; }
+		.travel-meta { margin-top: 1rem; font-size: 0.78rem; color: #aaa; font-weight: 500; }
+
+		/* ── travels bottom strip ── */
+		.travels-strip {
+			background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+			border-radius: 14px;
+			padding: 1.8rem 2rem;
+			display: flex;
+			align-items: center;
+			justify-content: space-around;
+			flex-wrap: wrap;
+			gap: 1rem;
+		}
+		.travels-strip-item { text-align: center; }
+		.travels-strip-num { display: block; font-size: 2rem; font-weight: 800; color: #F96D00; line-height: 1; }
+		.travels-strip-lbl { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.6); }
+		.travels-strip-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.15); }
+
 		/* ── responsive ── */
 		@media (max-width: 767px) {
 			.stat-strip { gap: 1rem; }
@@ -234,6 +285,7 @@
 					<li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
 					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 					<li class="nav-item"><a href="#projects-section" class="nav-link"><span>Projects</span></a></li>
+					<li class="nav-item"><a href="#travels-section" class="nav-link"><span>Travels</span></a></li>
 					<li class="nav-item"><a href="#blog-section" class="nav-link"><span>Blog</span></a></li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 				</ul>
@@ -846,6 +898,97 @@
 				</div>
 
 			</div><!-- /row -->
+		</div>
+	</section>
+
+
+	<!-- ══════════════ TRAVELS ══════════════ -->
+	<section class="ftco-section" id="travels-section" style="background:#f9f9f9;">
+		<div class="container">
+			<div class="row justify-content-center mb-5 pb-3">
+				<div class="col-md-7 heading-section text-center ftco-animate">
+					<h1 class="big big-2">Travels</h1>
+					<h2 class="mb-4">Remote &amp; Beyond</h2>
+					<p>Working remotely across time zones has taken me across the globe — from data science training in Japan to engineering from tropical Thailand. Every trip has shaped how I think about collaboration, culture, and code.</p>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+
+				<!-- Japan -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="travel-card">
+						<div class="travel-flag">🇯🇵</div>
+						<div class="travel-body">
+							<h3 class="travel-country">Japan</h3>
+							<div class="travel-years">
+								<span class="travel-year-badge">2019</span>
+								<span class="travel-year-badge">2024</span>
+								<span class="travel-year-badge">2026</span>
+							</div>
+							<p class="travel-desc">Three visits to Japan — starting with the Fujitsu Research Institute data science programme in 2019, then remote-working from Tokyo during my time at Everforth in 2024, and back again in 2026. Japan's mix of cutting-edge tech and deep tradition never gets old.</p>
+							<div class="travel-meta">🏙️ Tokyo &nbsp;·&nbsp; 🗻 Mt. Fuji region</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- New Zealand -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="travel-card">
+						<div class="travel-flag">🇳🇿</div>
+						<div class="travel-body">
+							<h3 class="travel-country">New Zealand</h3>
+							<div class="travel-years">
+								<span class="travel-year-badge">2025</span>
+							</div>
+							<p class="travel-desc">Explored New Zealand's stunning landscapes while staying fully productive remotely. The country's high-speed internet, great coffee culture, and breathtaking scenery make it a perfect remote-work destination.</p>
+							<div class="travel-meta">🌿 Auckland &nbsp;·&nbsp; 🏔️ South Island</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Thailand -->
+				<div class="col-md-4 mb-4 ftco-animate">
+					<div class="travel-card">
+						<div class="travel-flag">🇹🇭</div>
+						<div class="travel-body">
+							<h3 class="travel-country">Thailand</h3>
+							<div class="travel-years">
+								<span class="travel-year-badge">2026</span>
+							</div>
+							<p class="travel-desc">Currently based in Thailand — one of Asia's top digital nomad hubs. Thriving coworking scene, fast fibre, and an incredible food culture make it a natural home base for remote engineering work.</p>
+							<div class="travel-meta">🏙️ Bangkok &nbsp;·&nbsp; 🌴 Samut Prakan</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<!-- stats strip -->
+			<div class="row justify-content-center mt-3 ftco-animate">
+				<div class="col-md-10">
+					<div class="travels-strip">
+						<div class="travels-strip-item">
+							<span class="travels-strip-num">4</span>
+							<span class="travels-strip-lbl">Countries</span>
+						</div>
+						<div class="travels-strip-divider"></div>
+						<div class="travels-strip-item">
+							<span class="travels-strip-num">5</span>
+							<span class="travels-strip-lbl">Trips</span>
+						</div>
+						<div class="travels-strip-divider"></div>
+						<div class="travels-strip-item">
+							<span class="travels-strip-num">3</span>
+							<span class="travels-strip-lbl">Continents</span>
+						</div>
+						<div class="travels-strip-divider"></div>
+						<div class="travels-strip-item">
+							<span class="travels-strip-num">100%</span>
+							<span class="travels-strip-lbl">Remote-capable</span>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</section>
 
